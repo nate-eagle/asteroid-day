@@ -1,0 +1,69 @@
+/* Style for Asteroids.js
+ * Copyright (c) 2010 James Socol <me@jamessocol.com>
+ * See LICENSE.txt for license.
+ */
+
+/* body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Calibri", "System", monospace;
+  font-size: 14px;
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div#asteroids-day-game-container {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+
+  background-color: hsla(0, 0%, 0%, 0.9);
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+div#asteroids-day-game {
+  background-color: black;
+  margin: 50px auto;
+  width: 640px;
+  border: 1px solid #fff;
+  padding: 5px;
+}
+
+div#asteroids-day-game > * {
+  color: #fff;
+}
+
+div#asteroids-day-game > div {
+  font-family: "System", monospace;
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+
+div#asteroids-day-game > div > span {
+  float: right;
+  padding-left: 20px;
+}
+
+div#instructions {
+  width: 640px;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}

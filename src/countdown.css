@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Orbitron:wght@400..900&display=swap");
+
+#asteroid-day-countdown {
+  --hover-transition-speed: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px;
+  transition: background var(--hover-transition-speed);
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background: black;
+    .countdown-timer {
+      color: white;
+    }
+    .digits {
+      color: orange;
+    }
+  }
+}
+
+.asteroid-day-message {
+  font-family: "Lato";
+  /* font-weight: bold; */
+  font-optical-sizing: auto;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 25%;
+
+  a {
+    color: orange;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#asteroid-day-countdown img {
+  animation: spin 40s linear infinite;
+}
+
+.countdown-timer {
+  font-family: "Orbitron";
+  font-weight: bold;
+  font-optical-sizing: auto;
+  color: hsla(0, 0%, 0%, 1);
+  transition: color var(--hover-transition-speed);
+
+  b {
+    opacity: 0.5;
+    font-weight: normal;
+  }
+
+  .digits {
+    transition: color var(--hover-transition-speed);
+    display: inline-block;
+    width: calc(6ch + 4px);
+  }
+}
