@@ -1,10 +1,4 @@
-// src/auto-init.js
 import { createCountdownTimer, createAsteroidsGame } from "./index.js";
-
-// You can hard‐wire these IDs, or optionally read them from data‐attributes.
-// Here we assume:
-//   <div id="asteroid-day-countdown"></div>
-// calls -> createCountdownTimer(...), then on click -> spawn game.
 
 const ASTEROIDS_GAME_ID = "asteroids-day-game";
 
@@ -16,12 +10,11 @@ function domReady(fn) {
   }
 }
 
+// Returns the next Asteroid Day (June 30) based on the current date.
 function getNextAsteroidDay() {
   const today = new Date();
   const year = today.getFullYear();
 
-  // JS Date months are zero-based (0 = January, …, 5 = June, 11 = December).
-  // Construct June 30 of the current year:
   const thisYearJune30 = new Date(year, 5, 30);
 
   // If we’re still on or before June 30 of this year, return that.
@@ -34,7 +27,6 @@ function getNextAsteroidDay() {
 }
 
 domReady(() => {
-  // 1) Find the countdown container
   const countdownContainer = document.getElementById("asteroid-day-countdown");
   if (!countdownContainer) {
     console.warn(
@@ -56,7 +48,7 @@ domReady(() => {
     const message = document.createElement("div");
     message.innerHTML = `
     	<div class="asteroid-day-message">
-        <p>LeoLabs is a proud supporter of humanity&rsquo;s efforts to protect the earth from asteroids.</p>
+        <p>We proudly support humanity&rsquo;s efforts to protect the earth from asteroids.</p>
         <p><a href="https://asteroidday.org/">Learn more about Asteroid Day</a></p>
       </div>
     `;
@@ -69,18 +61,16 @@ domReady(() => {
 
     currentGame = createAsteroidsGame(gameDiv, {});
 
-    // 3) Once the game is running, listen for clicks _outside_ gameDiv
-    //    to shut it down:
     function endGame() {
-      // Otherwise, end & remove:
       currentGame.end();
       currentGame = null;
 
-      // Clean up:
+      // Clean up
       document.body.removeChild(gameContainer);
       document.removeEventListener("click", onDocumentClick, true);
       document.removeEventListener("keyup", onEscapeKey, true);
     }
+
     function onDocumentClick(evt) {
       // If the click target is inside gameDiv, ignore
       if (gameDiv.contains(evt.target)) return;
@@ -96,8 +86,6 @@ domReady(() => {
     }
 
     document.addEventListener("keyup", onEscapeKey, true);
-
-    // Use capture=true so we catch clicks early, before the game’s own handling:
     document.addEventListener("click", onDocumentClick, true);
   });
 });

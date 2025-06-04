@@ -2,6 +2,7 @@
 
 #asteroid-day-countdown {
   --hover-transition-speed: 0.3s;
+  background: hsla(0, 0%, 100%, 0.9);
   display: inline-flex;
   align-items: center;
   padding: 5px;
@@ -10,7 +11,7 @@
   border-radius: 5px;
 
   &:hover {
-    background: black;
+    background: hsla(0, 0%, 0%, 0.9);
     .countdown-timer {
       color: white;
     }

@@ -885,7 +885,7 @@ function createAsteroidsGame(containerElement, options = {}) {
   });
 }
 
-var css_248z = "@import url(\"https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Orbitron:wght@400..900&display=swap\");\n\n#asteroid-day-countdown {\n  --hover-transition-speed: 0.3s;\n  display: inline-flex;\n  align-items: center;\n  padding: 5px;\n  transition: background var(--hover-transition-speed);\n  cursor: pointer;\n  border-radius: 5px;\n\n  &:hover {\n    background: black;\n    .countdown-timer {\n      color: white;\n    }\n    .digits {\n      color: orange;\n    }\n  }\n}\n\n.asteroid-day-message {\n  font-family: \"Lato\";\n  /* font-weight: bold; */\n  font-optical-sizing: auto;\n  color: white;\n  font-size: 24px;\n  text-align: center;\n  margin: 0 25%;\n\n  a {\n    color: orange;\n  }\n}\n\n@keyframes spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n#asteroid-day-countdown img {\n  animation: spin 40s linear infinite;\n}\n\n.countdown-timer {\n  font-family: \"Orbitron\";\n  font-weight: bold;\n  font-optical-sizing: auto;\n  color: hsla(0, 0%, 0%, 1);\n  transition: color var(--hover-transition-speed);\n\n  b {\n    opacity: 0.5;\n    font-weight: normal;\n  }\n\n  .digits {\n    transition: color var(--hover-transition-speed);\n    display: inline-block;\n    width: calc(6ch + 4px);\n  }\n}\n";
+var css_248z = "@import url(\"https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Orbitron:wght@400..900&display=swap\");\n\n#asteroid-day-countdown {\n  --hover-transition-speed: 0.3s;\n  background: hsla(0, 0%, 100%, 0.9);\n  display: inline-flex;\n  align-items: center;\n  padding: 5px;\n  transition: background var(--hover-transition-speed);\n  cursor: pointer;\n  border-radius: 5px;\n\n  &:hover {\n    background: hsla(0, 0%, 0%, 0.9);\n    .countdown-timer {\n      color: white;\n    }\n    .digits {\n      color: orange;\n    }\n  }\n}\n\n.asteroid-day-message {\n  font-family: \"Lato\";\n  /* font-weight: bold; */\n  font-optical-sizing: auto;\n  color: white;\n  font-size: 24px;\n  text-align: center;\n  margin: 0 25%;\n\n  a {\n    color: orange;\n  }\n}\n\n@keyframes spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n#asteroid-day-countdown img {\n  animation: spin 40s linear infinite;\n}\n\n.countdown-timer {\n  font-family: \"Orbitron\";\n  font-weight: bold;\n  font-optical-sizing: auto;\n  color: hsla(0, 0%, 0%, 1);\n  transition: color var(--hover-transition-speed);\n\n  b {\n    opacity: 0.5;\n    font-weight: normal;\n  }\n\n  .digits {\n    transition: color var(--hover-transition-speed);\n    display: inline-block;\n    width: calc(6ch + 4px);\n  }\n}\n";
 styleInject(css_248z);
 
 var asteroidIconUrl = "data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20width%3D%22800px%22%20height%3D%22800px%22%20viewBox%3D%220%200%2064%2064%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m11.61%2021.55c1.45-1.32.19-4.94%204.06-7.06s6.13-1.38%206.13-1.38a5.67%205.67%200%200%201%201.87-.56c1.06-.13%202.56.5%206-1s5-2.94%208-3.06%207.81.93%209.94%202.93%202.25%207.5%205.12%2011.88%205.44%208.19%205.38%2011.19-1.94%205.93-5.19%2010.31a52.15%2052.15%200%200%201%20-6.5%207.56c-1%20.88-3.56%203.5-7.75%203.13s-8-2.25-9.56-2.63a8.8%208.8%200%200%200%20-4.75-.12%2025.69%2025.69%200%200%201%20-6.75%201.12c-1.56-.12-5.31-2.62-7.31-7s-5-14.69-4.3-17.69%203.55-5.75%205.61-7.62z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m13.23%2021.86c.67-1%201.5-4.56%202.75-5.5s4.38-2.19%204.94-1.75a8.48%208.48%200%200%200%204.81%203c3.5.94%206%201.06%208.38-1.19a5.43%205.43%200%200%200%201.94-4.62%203%203%200%200%201%20.56-1.38c.25-.18%208.25.32%2010.06%202.63s2.25%208.75%204.94%2012.75%204.19%206.06%204.19%208.62-.69%204.82-3.5%208.07-6.82%209.31-8.82%2010.25a12.59%2012.59%200%200%201%20-7.31.81c-2.37-.5-5.06-3.38-9.25-2.94s-6.37%202.39-9.75%201.31-6.44-8.75-7.62-13.31-2.75-8.31-1.19-10.81%204.19-4.94%204.87-5.94z%22%20fill%3D%22%23e6e4da%22%2F%3E%3Cpath%20d%3D%22m23.05%2014.36c.32-.07%201.25%200%204.06-.44s6.31-2.87%206.56-2.43.06%203.12-1.06%204.06-3.88%201.12-5.63.81-4.5-1.87-3.93-2z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22m16%2019.74a5.88%205.88%200%200%201%201.55-3c.58-.33%202.37-.88%202.5-.58s.45.75.12.91-1.79.25-2%20.79a10.68%2010.68%200%200%201%20-1.17%202.14c-.27.2-.89-.1-1-.26z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m10.94%2026.82c.26-.22%201.54.21%201.38.5s-1.46%201.25-1.46%202.54.41%202.29.08%202.42-1.21.46-1.29-.08a8.64%208.64%200%200%201%20-.08-2.55%2011.84%2011.84%200%200%201%201.37-2.83z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m40.82%2013.9a2.42%202.42%200%200%201%203.5%202.59c-.38%202.29-3.38%202.25-4.34%201.37a2.5%202.5%200%200%201%20.84-3.96z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m41.33%2015a1.21%201.21%200%200%201%201.76%201.3c-.19%201.15-1.7%201.13-2.18.69a1.25%201.25%200%200%201%20.42-1.99z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22m29.19%2021c.81-.26%202.81%200%202.63%202s-2.46%201.54-3.38%201.08-.92-2.72.75-3.08z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m29.55%2022c.36-.09%201.22%200%201.13.89s-1.05.67-1.45.47a.8.8%200%200%201%20.32-1.36z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22m19.61%2025.2c1.42-.68%205-.3%207.54.83s1.85%202.58.85%206.08-1.89%205.89-2.6%206.79a6.32%206.32%200%200%201%20-2.67%201.84c-.54.08-2.58.16-3-.29a4.19%204.19%200%200%200%20-2.33-1.84c-1.29-.25-2.63%200-3.42-1.75a7.19%207.19%200%200%201%20.5-6.33%2013.75%2013.75%200%200%201%205.13-5.33z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m20.32%2026.07c.8-.3%204.25.5%205.45.88s2.05%201.08%201.88%202.12a58.3%2058.3%200%200%201%20-2.13%206.08c-.87%202.38-.87%202.92-2.16%203.71s-2.25%201.09-2.59.75a6.33%206.33%200%200%200%20-2.87-2c-1.5-.37-2.63-.66-2.79-1.12a7.78%207.78%200%200%201%20.37-5.38c1.17-2.11%203.59-4.58%204.84-5.04z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22m39.11%2021.65a5.75%205.75%200%200%201%207.46%202.71%205.14%205.14%200%200%201%20-2.13%207.09c-2.12.91-6.25%201.45-8-1.17s-1.12-6.5%202.67-8.63z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m41.77%2022.24a4.77%204.77%200%200%201%203.63%202.58c1.08%202.17.67%203.5-.08%204.54a5.68%205.68%200%200%201%20-5.55%201.79%203.61%203.61%200%200%201%20-2.87-2.95c-.08-.63-.17-1.71%200-1.71s1.33%202.37%201.67%202.29.66-.83.54-1a16.06%2016.06%200%200%201%20-1.58-2.71c.12-.12.54-1.12.75-.87s1.33%203.25%201.58%203.08.67-.92.5-1.21-1.54-2.5-1.33-2.71%201.16-.91%201.33-.75.71%202.17%201%202.21a.6.6%200%200%200%20.64-.62c-.06-.3-.52-1.88-.23-1.96z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22m16.07%2033.4c-.13-.3.5-.87.83-.58s1.87%203.13%201.58%203.33-.54.34-.75.25a21.16%2021.16%200%200%201%20-1.66-3z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m17.61%2030.86c.06-.29.54-.66.83-.5a22.57%2022.57%200%200%201%202%204.42.7.7%200%200%201%20-.5.79%2028.93%2028.93%200%200%201%20-2.33-4.71z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m19.44%2028.78c-.06-.2.54-.75.79-.58a12.31%2012.31%200%200%201%201.5%203.87c-.08.58-.37.92-.58.75a38.56%2038.56%200%200%201%20-1.71-4.04z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m21.69%2027.61c0-.24.83-.37%201-.25a4%204%200%200%201%20.46%201.92c-.17.37-.42.75-.67.46a6.45%206.45%200%200%201%20-.79-2.13z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m31.9%2033.82a1.83%201.83%200%200%201%202.54%201.92c0%201.91-2.54%202-3.42%201.25s-.7-2.42.88-3.17z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m32.24%2034.84a.74.74%200%200%201%201%20.78c0%20.79-1%20.82-1.39.51s-.26-.98.39-1.29z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22m49.38%2030.93a2.29%202.29%200%200%201%203.18%202.4c0%202.39-3.18%202.5-4.27%201.56s-.89-3.02%201.09-3.96z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m49.7%2031.89a1.27%201.27%200%200%201%201.77%201.33c0%201.34-1.77%201.39-2.38.87a1.35%201.35%200%200%201%20.61-2.2z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22m24.23%2044c1.18-.54%203.79.25%203.25%202.5s-3.16%201.62-4%20.91a2%202%200%200%201%20.75-3.41z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m24.61%2044.74c.72-.33%202.33.15%202%201.54s-1.94%201-2.45.56a1.25%201.25%200%200%201%20.45-2.1z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22m35.69%2042.86c.87-.32%201.67.79%203.54.25s4.04-1.41%205.77-1.11a2.37%202.37%200%200%201%202.29%201.91%205.43%205.43%200%200%201%20-.41%202.63%2033%2033%200%200%201%20-2.88%202.57c-.91.88-1.46%201.71-2.46%201.54s-1.7-.83-3.25-.87a7.12%207.12%200%200%201%20-3.08-.46c-.79-.37-2.42-1.75-2.33-2.75a6.37%206.37%200%200%201%202.81-3.71z%22%20fill%3D%22%231d1d1b%22%2F%3E%3Cpath%20d%3D%22m35.23%2044.53s.09%202.42.34%202.5.66.12.66-.08-.33-3%200-3.05.71.05.75.17-.08%203.13.25%203.17.67.16.67%200%200-3%200-3%20.5%200%20.58.12%200%203%20.34%203.09.66%200%20.66-.21a20.84%2020.84%200%200%201%20-.08-3.24c.17%200%201-.46%201-.29s0%202.41.21%202.41.83%200%20.83-.29-.21-2.21%200-2.33%201.17-.5%201.21-.33-.08%201.62.09%201.62.66%200%20.66-.29%200-1.54.17-1.58%202.25%200%202.5.54a3.89%203.89%200%200%201%20.12%202.16c-.16.25-1.79%201.42-2.54%202.34s-1.33%201.58-1.91%201.62-1.71-.71-2.67-.87-2.54%200-3.42-.42a2.22%202.22%200%200%201%20-1.37-1.58%204.7%204.7%200%200%201%20.95-2.18z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cg%20fill%3D%22%231d1d1b%22%3E%3Cpath%20d%3D%22m36.32%2037.24c-.27-.18.79-.46%201-.29s1.55%203.37%201.25%203.58a2.28%202.28%200%200%201%20-1%20.21s-1.13-3.42-1.25-3.5z%22%2F%3E%3Cpath%20d%3D%22m37.82%2035.32c.14-.15.75-.62%201-.42a9.85%209.85%200%200%201%20.87%203.71c-.21.25-.91.42-1%20.17a24.72%2024.72%200%200%201%20-.87-3.46z%22%2F%3E%3Cpath%20d%3D%22m40.32%2034.49c.12-.17.7-.38.79-.09a14.94%2014.94%200%200%201%20.37%203.17c-.16.13-.79.42-.91.08a13.65%2013.65%200%200%201%20-.25-3.16z%22%2F%3E%3Cpath%20d%3D%22m45.77%2039.53c.14.13%203.15%202.14%203.15%202.67s-.06%201-.73.54a30.94%2030.94%200%200%201%20-3-2.29c0-.21.5-1%20.58-.92z%22%2F%3E%3Cpath%20d%3D%22m46%2037.7c-.05-.23.46-.63.71-.55s3.79%203.67%203.59%203.84-.42.5-.63.5a27%2027%200%200%201%20-3.67-3.79z%22%2F%3E%3Cpath%20d%3D%22m48.07%2036.65s.41-.7.75-.5%202.75%202.84%202.66%203.13-.54.79-.75.67-2.54-3.17-2.66-3.3z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
@@ -961,13 +961,6 @@ function createCountdownTimer(containerElement, { endTime }) {
   };
 }
 
-// src/auto-init.js
-
-// You can hard‐wire these IDs, or optionally read them from data‐attributes.
-// Here we assume:
-//   <div id="asteroid-day-countdown"></div>
-// calls -> createCountdownTimer(...), then on click -> spawn game.
-
 const ASTEROIDS_GAME_ID = "asteroids-day-game";
 
 function domReady(fn) {
@@ -978,12 +971,11 @@ function domReady(fn) {
   }
 }
 
+// Returns the next Asteroid Day (June 30) based on the current date.
 function getNextAsteroidDay() {
   const today = new Date();
   const year = today.getFullYear();
 
-  // JS Date months are zero-based (0 = January, …, 5 = June, 11 = December).
-  // Construct June 30 of the current year:
   const thisYearJune30 = new Date(year, 5, 30);
 
   // If we’re still on or before June 30 of this year, return that.
@@ -996,7 +988,6 @@ function getNextAsteroidDay() {
 }
 
 domReady(() => {
-  // 1) Find the countdown container
   const countdownContainer = document.getElementById("asteroid-day-countdown");
   if (!countdownContainer) {
     console.warn(
@@ -1018,7 +1009,7 @@ domReady(() => {
     const message = document.createElement("div");
     message.innerHTML = `
     	<div class="asteroid-day-message">
-        <p>LeoLabs is a proud supporter of humanity&rsquo;s efforts to protect the earth from asteroids.</p>
+        <p>We proudly support humanity&rsquo;s efforts to protect the earth from asteroids.</p>
         <p><a href="https://asteroidday.org/">Learn more about Asteroid Day</a></p>
       </div>
     `;
@@ -1031,18 +1022,16 @@ domReady(() => {
 
     currentGame = createAsteroidsGame(gameDiv, {});
 
-    // 3) Once the game is running, listen for clicks _outside_ gameDiv
-    //    to shut it down:
     function endGame() {
-      // Otherwise, end & remove:
       currentGame.end();
       currentGame = null;
 
-      // Clean up:
+      // Clean up
       document.body.removeChild(gameContainer);
       document.removeEventListener("click", onDocumentClick, true);
       document.removeEventListener("keyup", onEscapeKey, true);
     }
+
     function onDocumentClick(evt) {
       // If the click target is inside gameDiv, ignore
       if (gameDiv.contains(evt.target)) return;
@@ -1058,13 +1047,9 @@ domReady(() => {
     }
 
     document.addEventListener("keyup", onEscapeKey, true);
-
-    // Use capture=true so we catch clicks early, before the game’s own handling:
     document.addEventListener("click", onDocumentClick, true);
   });
 });
-
-console.log("AsteroidDay library loaded!");
 
 export { createAsteroidsGame, createCountdownTimer };
 //# sourceMappingURL=asteroid-day.esm.js.map

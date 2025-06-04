@@ -1,14 +1,21 @@
 {
   "name": "asteroid-day",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Asteroids Day countdown that lets uses play Asteroids",
+  "homepage": "https://github.com/nate-eagle/asteroid-day",
   "main": "dist/asteroid-day.umd.js",
   "module": "dist/asteroid-day.esm.js",
+  "files": [
+	  "dist/",
+	  "README.md",
+	  "LICENSE.txt"
+  ],
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c --watch"
+    "dev": "rollup -c --watch",
+    "prepublishOnly": "npm run build"
   },
-  "author": "",
+  "author": "Nate Eagle <neagle@leolabs.space>",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.3",
