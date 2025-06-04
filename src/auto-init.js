@@ -46,11 +46,10 @@ domReady(() => {
 
     const gameContainer = document.createElement("div");
     const message = document.createElement("div");
+    message.classList.add("asteroid-day-message");
     message.innerHTML = `
-    	<div class="asteroid-day-message">
-        <p>We proudly support humanity&rsquo;s efforts to protect the earth from asteroids.</p>
-        <p><a href="https://asteroidday.org/">Learn more about Asteroid Day</a></p>
-      </div>
+      <p>We proudly support humanity&rsquo;s efforts to protect the earth from asteroids.</p>
+      <p><a href="https://asteroidday.org/">Learn more about Asteroid Day</a></p>
     `;
     const gameDiv = document.createElement("div");
     gameContainer.id = ASTEROIDS_GAME_ID + "-container";

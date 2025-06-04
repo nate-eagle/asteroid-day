@@ -1,6 +1,6 @@
 {
   "name": "asteroid-day",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Asteroids Day countdown that lets uses play Asteroids",
   "homepage": "https://github.com/nate-eagle/asteroid-day",
   "main": "dist/asteroid-day.umd.js",
